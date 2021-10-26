@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About us</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+
+  <style>
+    
+    /* for about us */
+    @import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.our_team{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8%;
+}
+
+.our_team .team_member{
+  width: 250px;
+  margin: 1px;
+  padding: 2px 5px;
+  text-align: center;
+}
+
+.our_team .team_member .member_img{
+  background: #e9e5fa;  
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.our_team .team_member .member_img img{
+  width: 100%;
+  height: 100%;
+}
+
+.our_team .team_member h3{
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+}
+
+.our_team .team_member span{
+  font-size: 10px;
+}
+
+.our_team .team_member p{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.our_team .team_member .member_img .social_media{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.65);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+   transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img .social_media .item{
+  margin: 0 10px;
+}
+
+.our_team .team_member .member_img .social_media .fab{
+  color: #8c7ae6;
+  font-size: 20px;
+}
+
+.our_team .team_member .member_img:hover .social_media{
+  transform: scale(1);
+}
+/* Backgroundcolorlllllllllllll */
+      body{
+          background-color: rgb(180, 149, 103);
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+/*  */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: brown;
+}
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  /* background: #1E232B; */
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  /* color: #fff; */
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: brown;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: brown;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  /* color: #fff; */
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    /* background: #14181F; */
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1E232B;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    /* background: #1E232B; */
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color:brown;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+/* dropdwon */
+/* .dropbtn { */
+  /* background-color: black; */
+  /* color: white; */
+  /* padding: 16px;
+  font-size: 16px;
+  border: none;
+} */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /* background-color: #f1f1f1; */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(46, 21, 21, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  /* color: black; */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+.pic{
+    background-color: rgb(51, 32, 32);
+}
+.container{
+    margin-top: 2%;
+}
+.us{
+  margin-top: 2%;
+  text-align: center;
+  color: black;
+}
+.pics{
+  margin-left: 1%;
+}
+  </style>
+</head>
+<body> 
+    <div class="pic">
+    <img class="pics" src="https://icon2.cleanpng.com/20171221/ceq/coffee-logo-5a3b5ba22c4ca1.2562328315138395221815.jpg" style= "width:4.5%; height:4.5%;border-radius:100%">
+<hr style="color: white;">
+<nav>
+    <div class="menu-icon">
+       <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo">
+    </div>
+    <div class="nav-items">
+       <li><a href="#home">Home</a></li>
+       <li><a href="#about">About</a></li>
+       <li><a href="#">Customize Coffee</a></li>
+       <li><div class="dropdown">
+        <button class="dropbtn">Shop with us</button>
+        <div class="dropdown-content">
+          <a href="#">Mechines</a>
+          <a href="#coffee">Coffee type</a>
+          <!-- <a href="#">Custozing coffee</a> -->
+        </div>
+      </div></li>
+       <li><a href="#">Contact</a></li>
+    </div>
+    <div class="search-icon">
+       <span class="fas fa-search"></span>
+    </div>
+    <div class="cancel-icon">
+       <span class="fas fa-times"></span>
+    </div>
+    <form action="#">
+       <input type="search" class="search-data" placeholder="Search" required>
+       <button type="submit" class="fas fa-search"></button>
+    </form>
+    <a style="color: white;margin-left: 10%;" href="#">Login/Signup</a>
+ </nav>
+
+</div>
+ <!-- end -->
+ <!-- landing -->
+ <div id="#home">
+ <div class="content">
+ </div>
+ <div class="container">  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+      </ol>
+  
+      <div class="carousel-inner">
+        <div class="item active">
+          <h4 style="text-align: center;color: white;">Machines</h4>
+          <img src="http://cdn.shopify.com/s/files/1/0028/0520/3057/files/brew-Auto-800x400.jpg?v=1594701394" style="width:100%;height:50%,">
+        </div>
+  
+        <div class="item">
+          <h4 style="text-align: center;color: white;">About us</h4>
+          <img src="https://st2.depositphotos.com/3591429/11476/i/950/depositphotos_114769730-stock-photo-people-drinking-coffee.jpg            " style="width:100%;height:50%,">
+        </div>
+      
+        <div class="item">
+          <h4 style="text-align: center;color: white;">Coffee culture</h4>
+          <img src="https://jetsettimes.com/wp-content/uploads/2012/10/dsc00184.jpg" style="width:100%" style="width:100%;height:50%,">
+        </div>
+
+        <div class="item">
+          <h4 style="text-align: center;color: white;">Coffee types</h4>
+          <img src="https://c4.wallpaperflare.com/wallpaper/231/256/948/coffee-bean-cup-still-life-photography-coffee-cup-wallpaper-preview.jpg" style="width:100%" style="width:100%;height:50%,">
+        </div>
+
+        <div class="item">
+          <h4 style="text-align: center;color: white;">Top items</h4>
+          <img src="https://www.tokyu-hands.co.jp/hintmagazine/assets_c/2017/08/09cofee1_top-thumb-700xauto-185516.jpg" style="width:100%" style="width:100%;height:50%,">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!-- About us -->
+  <hr>
+  <h1 class="us">Our Team</h1>
+  <div id="about">
+  <div class="wrapper">
+    <div class="our_team">
+        <div class="team_member">
+          <div class="member_img">
+             <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%202.png" alt="our_team" style="border-radius: 100%;">
+            <div class="social_media">
+               <div class="twitter item"><i class="fab fa-twitter"></i></div>
+               <div class="instagram item"><i class="fab fa-instagram"></i></div>
+             </div>
+          </div>
+          <h3 style="color: black;">Catherine Gichina</h3>
+          <h5 style="color: black;">Software Developer</h5>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%203.png" alt="our_team" style="border-radius: 100%;">
+             <div class="social_media">
+               <div class="twitter item"><i class="fab fa-twitter"></i></div>
+               <div class="instagram item"><i class="fab fa-instagram"></i></div>
+             </div>
+          </div>
+          <h3 style="color: black;">Sandra Nasasiira</h3>
+          <h5 style="color: black;">UX/UI Designer</h5>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/constance%20kavaya.jpg" alt="our_team" style="border-radius: 100%;">
+             <div class="social_media">
+               <div class="twitter item"><i class="fab fa-twitter"></i></div>
+               <div class="instagram item"><i class="fab fa-instagram"></i></div>
+             </div>
+          </div>
+          <h3 style="color: black;">Constant  Kavaya</h3>
+          <h5 style="color: black;">Software Developer</h5>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%205.png" alt="our_team" style="border-radius: 100%;">
+             <div class="social_media">
+               <div class="twitter item"><i class="fab fa-twitter"></i></div>
+               <div class="instagram item"><i class="fab fa-instagram"></i></div>
+             </div>
+          </div>
+          <h3 style="color: black;">Hamdi Abas</h3>
+          <h5 style="color: black;">Front-end Developer</h5>
+      </div> 
+      
+      <div class="team_member">
+        <div class="member_img">
+          <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Aisha2.png" alt="our_team" style="border-radius: 100%;">
+          <div class="social_media">
+            <div class="twitter item"><i class="fab fa-twitter"></i></div>
+            <div class="instagram item"><i class="fab fa-instagram"></i></div>
+          </div>
+       </div>
+       <h3 style="color: black;">Aisha Fadallala</h3>
+       <h5 style="color: black;">Software Developer</h5>
+   </div> 
+    </div>
+</div>
+</div>
+<div style="text-align: center; margin-top: 2%;">
+<a href="#" class="btn btn-primary">Read More</a>
+</div>
+<h3 style="text-align: center;margin-top: 5%;">History of Kenyan coffee</h3>
+<!-- Ends-->
+
+<!-- all products -->
+<div style="background-color: rgb(51, 32, 32);">
+  <h1 style="color:white; margin-left: 4%;">Shop with Coffeehub</h1>
+  <h3 style="color: white;margin-left: 4%;">Explore more with us</h3>
+  <hr>
+</div>
+<div style="margin-left: 5%;">
+<h1>Filters</h1>
+<h4>Categories</h4>
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <a href="#coffee"><label for="vehicle1">Coffee</label><br></a>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+ <label for="vehicle2">Machines</label><br>
+</form>
+</div>
+  <div style="white-space:10%;">
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" /></svg> 
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="black" /></svg> 
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="Yellow" /></svg>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%;">
+  <div class="col">
+    <div class="card">
+      <img src="https://www.plasticprinters.com/hs-fs/hubfs/social-suggested-images/Menu-Coffee-Cup-Black-Rifle-Coffee-Company-Sample.jpg?width=840&name=Menu-Coffee-Cup-Black-Rifle-Coffee-Company-Sample.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Custozing Coffee</h5>
+        <a href="#" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.eac.int/images/Press_Releases/coffee.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Coffee Varieties</h5>
+        <a href="#coffee" class="btn btn-primary">Read more</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.bestconsumerreviews.com/wp-content/uploads/2018/09/Espresso-Machine-5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Coffee Machine</h5>
+        <a href="#" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <div style="text-align: center;">
+<a href="#" class="btn btn-primary">Read more</a>
+</div>
+<!-- For the products end -->
+
+<!-- For coffee -->
+<div id="coffee">
+<div style="background-color: rgb(51, 32, 32);margin-top: 2%;">
+<h1 style="color:white; margin-left: 4%;">Coffee</h1>
+<h3 style="color: white;margin-left: 4%;">Explore more of coffee varieties from across the world</h3>
+<hr>
+<!-- btn -->
+</div>
+<div style="margin-left: 5%; margin-bottom: 3%;">
+<a  href="#" button type="button" class="btn btn-secondary btn-lg">Beans</button></a>
+<a href="#" button type="button" class="btn btn-secondary btn-lg">Ground</button></a>
+</div><div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%;">
+  <div class="col">
+    <div class="card">
+      <img src="https://static.wixstatic.com/media/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.jpg/v1/crop/x_80,y_0,w_320,h_320/fill/w_448,h_297,al_c,lg_1,q_80/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Arabica Coffee</h5>
+        <a href="{% url 'products' %}" class="btn btn-primary">Read more</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XcrGwgG1O1zlIVTdaz-_dh-XsrKUsk1HiQ&usqp=CAU" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Robuster Coffee</h5>
+        <a href="{% url 'products' %}" class="btn btn-primary">Read more</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.ubuy.co.id/productimg/?image=aHR0cHM6Ly9pLmViYXlpbWcuY29tL2ltYWdlcy9nL3ZIY0FBT1N3NW54YWJtYjcvcy1sNTAwLmpwZw.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Liberica</h5>
+        <a href="{% url 'products' %}" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+  <!-- for Nabars -->
+  <script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#FF3D00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+ </script>
+
+</body>
+</html>
+
