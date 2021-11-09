@@ -1,0 +1,211 @@
+
+{% include 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <title>@coffeehub/products</title>
+</head>
+<style>
+     body{
+          background-color: rgb(241, 234, 221);
+      }
+</style>
+<body>
+    {% csrf_token %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%;margin-top: 1%;">
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPVUvvcg6omNgClZPsmcy8HizKSyIGj-bCng&usqp=CAU" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Nunix Coffee Maker Machine 12 Cups, 3 colors</h6>
+          <h6 class="card-title">USD 40</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-bean-to-cup-coffee-machines-1587117249.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Coffee Machine Electric Oven Toasted Bread Coffee Maker</h6>
+          <h6 class="card-title">USD 35</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://cdn.shopify.com/s/files/1/0229/4212/2061/products/Nano-Family_1200x.jpg?v=1561336879" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Dolce Gusto Nescafe Mini Me Coffee Maker</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%; margin-top: 1%;">
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_y77idtjfBZ6ghJaHK7OW8UIUe_JYeYAfUg&usqp=CAU" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Delonghi BCO320 Combi Coffee Maker</h5>
+          <h6 class="card-title">USD 60</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwoo-aVhdPJhsOh0FDTkYDEYImlDBVmpBpToamynijx67u6dwuCRDws7LjBj1FVbz-vrI&usqp=CAU" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kenwood CTP10.000BR Coffee Maker</h5>
+          <h6 class="card-title">USD 45</h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+
+    <div class="col">
+      <div class="card">
+        <img src="https://thegadgetflow.com/wp-content/uploads/2021/06/Ninja-Specialty-Coffee-Maker-01.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <h6 class="card-title">USD 25</h6>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+</div>
+</body>
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  margin-top: 15%;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: wheat;
+  color: black;
+  transform: rotateY(180deg);
+}
+</style>
+</html>

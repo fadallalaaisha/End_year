@@ -1,3 +1,5 @@
+{% include 'base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +15,43 @@
     <title>@coffeehub/products</title>
 </head>
 <style>
-    body{
-        background-color: rgb(198, 204, 110);
-    }
+     body{
+          background-color: rgb(241, 234, 221);
+      }
+    /* truning the cards */
+    /* kkkkkkkkkkkkkkkkkkkkkkkk */
+
+    .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    background-color:rgba(165, 42, 42, 0.5);
+    color: white;
+    transform: rotateY(180deg);
+  }
+  a{
+   color: white;
+  }
 </style>
 <body>
     {% csrf_token %}
-<!-- <a href="{% url 'home_page' %}">home</a> -->
- 
+<!--  
   <div style="background-color: rgb(41, 24, 24);">
   <img class="pic" src="https://icon2.cleanpng.com/20171221/ceq/coffee-logo-5a3b5ba22c4ca1.2562328315138395221815.jpg" style= "width:5%; height:8%;border-radius:100%">
 
@@ -57,72 +88,267 @@
     <h6>Login/Signup</h6>
   </nav>
 </div>
-</div>
+</div> -->
 <!-- end of navbars -->
 
-<div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%;">
-    <div class="col">
+<h1 style="text-align: center;">Arabica Coffee</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%;">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+  <div class="col">
       <div class="card">
-        <img src="https://static.wixstatic.com/media/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.jpg/v1/crop/x_80,y_0,w_320,h_320/fill/w_448,h_297,al_c,lg_1,q_80/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.webp" class="card-img-top" alt="...">
+        <img src="https://marketresearch.biz/wp-content/uploads/2019/05/Green-Coffee-Bean-Extract-Market-400x225.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Arabica Coffee</h5>
-          <a href="#" class="btn btn-primary">Read more</a>
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
 
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XcrGwgG1O1zlIVTdaz-_dh-XsrKUsk1HiQ&usqp=CAU" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Robuster Coffee</h5>
-          <a href="#" class="btn btn-primary">Read more</a>
-
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="https://www.ubuy.co.id/productimg/?image=aHR0cHM6Ly9pLmViYXlpbWcuY29tL2ltYWdlcy9nL3ZIY0FBT1N3NW54YWJtYjcvcy1sNTAwLmpwZw.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Liberica</h5>
-          <a href="#" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
   </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
 
-  <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%; margin-top: 1%;">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d598266549899.58d988f1cc3dd.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://s01.sgp1.digitaloceanspaces.com/large/883812-dpseucrhmf-1528194824.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+  </div>
+<!-- hhhhhhhhhhhhhhhhhhhhhhhh -->
+<h1 style="text-align: center;">Robuster Coffee</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%; margin-top: 1%;">
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
     <div class="col">
       <div class="card">
         <img src="https://sc02.alicdn.com/kf/Ubd2c14a837044fa2a634e00452ed2e75b/992989845/Ubd2c14a837044fa2a634e00452ed2e75b.png_.webp" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Arabica Coffee</h5>
-
+          <h5 class="card-title"></h5>
         </div>
       </div>
     </div>
+    
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+<div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
     <div class="col">
       <div class="card">
         <img src="https://www.pfmonthenet.net/global/showimage.ashx?Type=Article&ID=15534" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Robuster Coffee</h5>
-
+          <h5 class="card-title"></h5>
         </div>
       </div>
     </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
     <div class="col">
       <div class="card">
         <img src="https://www.sdrpack.com/media/393/w-690/h-500/Imballaggio-compostabile-SDR-PACK.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Liberica</h5>
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+  </div>
+  
+
+<!-- ffffffffffffff -->
+<h1 style="text-align: center;">Liberica Coffee</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%; margin-top: 1%;">
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://sc02.alicdn.com/kf/Ubd2c14a837044fa2a634e00452ed2e75b/992989845/Ubd2c14a837044fa2a634e00452ed2e75b.png_.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+
+<div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/51fNEJnsHwL.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://www.aradacoffee.com/images/2019/07/10/bdsc_0018-home.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 80%;margin-left: 10%; margin-top: 1%;">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+    <div class="col">
+      <div class="card">
+        <img src="https://envirothink.files.wordpress.com/2015/08/marley-coffee-single-serving-packaging-2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Arabica Coffee</h5>
         </div>
       </div>
     </div>
   </div>
-</body>
-</html>
+  <div class="flip-card-back">
+    <p>Dolce Gusto Nescafe Mini Me Red Coffee Maker</p> 
+    <a href="{% url 'store' %}" class="">Order</a>
+  </div>
+</div>
+</div>
 
-
 </body>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  margin-top: 15%;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: wheat;
+  color: black;
+  transform: rotateY(180deg);
+}
+</style>
 </html>

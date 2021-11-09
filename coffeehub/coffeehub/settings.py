@@ -1,5 +1,6 @@
 import django_heroku
 
+
 """
 Django settings for coffeehub project.
 
@@ -14,6 +15,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from PIL import Image
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,7 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hub',
+    'store',
+    # 'pillow',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+ACCOUNT_FORMS = {
+   "login": "users.forms.NewUserForm"
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,3 +141,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
+
+STATIC_URL = '/static/'
+MEDIA_URL = "/image/download/"
+MEDIA_ROOT = BASE_DIR
