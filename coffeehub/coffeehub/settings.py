@@ -17,6 +17,12 @@ from pathlib import Path
 import os
 from PIL import Image
 
+# import cloudinary
+# import cloudinary_storage
+
+# from decouple import config
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,7 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hub',
     'store',
-    # 'pillow',
+    # 'cloudinary',
+    # 'cloudinary_storage',
+    
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -145,3 +153,22 @@ django_heroku.settings(locals())
 STATIC_URL = '/static/'
 MEDIA_URL = "/image/download/"
 MEDIA_ROOT = BASE_DIR
+
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'akirachix1',
+#     'API_KEY': '393194671795571',
+#     'API_SECRET': '9VsY9Fg1AiSsyxp-hdT4KqeaPLk',
+# }
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': config('CLOUD_NAME', default=""),
+#     'API_KEY': config('API_KEY', default=""),
+#     'API_SECRET': config('API_SECRET', default=""),
+# }
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

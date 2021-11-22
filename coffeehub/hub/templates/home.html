@@ -7,39 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" href="style.css">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <style>
-    /* kkkkkkkkkkkkkkkkkkkkkkkk */
-
-    .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  .flip-card-back {
-    background-color:rgba(165, 42, 42, 0.5);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  a{
-   color: white;
-  }
-  /* kkkkkkkkkkkkkkkkkkkkkkkkk */
+    
     /* for about us */
     @import url('https://fonts.googleapis.com/css?family=Exo+2|Yatra+One');
 
@@ -128,11 +102,12 @@
   transform: scale(1);
 }
 /* Backgroundcolorlllllllllllll */
-      body{
-          background-color: rgb(241, 234, 221);
-      }
+body{
+      background-color: antiquewhite;
+    }
 
       @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+/*  */
 nav{
   display: flex;
   flex-wrap: wrap;
@@ -156,16 +131,16 @@ nav .nav-items li a{
   font-weight: 500;
   text-decoration: none;
 }
-nav .nav-items li a:hover{
+/* nav .nav-items li a:hover{
   color: brown;
-}
+} */
 nav form{
   display: flex;
   height: 40px;
   padding: 2px;
   min-width: 18%!important;
   border-radius: 2px;
-  border: 1px solid rgba(243, 233, 233, 0.2);
+  border: 1px solid rgba(155,155,155,0.2);
 }
 nav form .search-data{
   width: 100%;
@@ -178,15 +153,12 @@ nav form .search-data{
 }
 nav form button{
   padding: 0 15px;
-  color: #fff;
+  /* color: #fff; */
   font-size: 17px;
-  background: rgb(230, 190, 118);
+  background: rgb(173, 131, 131);
   border: none;
   border-radius: 2px;
   cursor: pointer;
-}
-nav form button:hover{
-  background: white;
 }
 nav .menu-icon,
 nav .cancel-icon,
@@ -226,6 +198,7 @@ nav .search-icon{
     height: 100%;
     padding: 10px 50px 0 50px;
     text-align: center;
+    /* background: #14181F; */
     display: inline-block;
     transition: left 0.3s ease;
   }
@@ -261,7 +234,7 @@ nav .search-icon{
     height: 0;
     z-index: -1;
     border: 10px solid transparent;
-    border-bottom-color: wheat;
+    border-bottom-color: white;
     margin: -20px 0 0;
   }
   nav form:after{
@@ -269,6 +242,7 @@ nav .search-icon{
     content: '';
     height: 60px;
     padding: 2px;
+    /* background: #1E232B; */
     border-radius: 2px;
     min-width: calc(100% + 20px);
     z-index: -2;
@@ -310,7 +284,8 @@ nav .search-icon{
   margin: 10px 0;
 }
 nav .logo.space{
-  color:brown;
+  /* color:brown; */
+  color: white;
   padding: 0 5px 0 0;
 }
 @media (max-width: 980px){
@@ -331,32 +306,12 @@ nav .logo.space{
     font-size: 16px;
   }
 }
-/* llllllllllll */
-.dropdown {
-  position: relative;
-  /* display: inline-block; */
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  z-index: 10;
-}
-
-.dropdown-content a {
-  padding: 10px 16px;
-  background-color: rgb(71, 65, 65);
-  text-decoration: none;
-  display: block;
-  
-}
-.dropdown:hover .dropdown-content {display: block;}
 
 .content{
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 .content header{
   font-size: 30px;
@@ -386,6 +341,7 @@ nav .logo.space{
   </style>
 </head>
 <body> 
+  <div id="home">
     <div class="pic">
     <img class="pics" src="https://icon2.cleanpng.com/20171221/ceq/coffee-logo-5a3b5ba22c4ca1.2562328315138395221815.jpg" style= "width:4.5%; height:4.5%;border-radius:100%">
 <hr style="color: white;">
@@ -397,19 +353,22 @@ nav .logo.space{
     </div>
     <div class="nav-items">
        <li><a href="#home">Home</a></li>
-       <li><a href="#customzing">Customize Coffee</a></li>
-       <li><div class="dropdown">
-        <button class="dropbtn">Shop with us</button>
-        <div class="dropdown-content">
-          <a href="{%url 'machines' %}">Machines</a>
-          <a href="#coffee">Coffee type</a>
-          <a href="#{%url 'read' %}"> Coffee Cultures</a>
+       <li><a href="#customize">Customize Coffee</a></li>
+
+        <div class="dropdown">
+          <button style="color: white; font-size: 2.8vh;" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Shop with us
+          <span class=""></span></button>
+          <ul class="dropdown-menu" style="background-color: rgb(71, 65, 65);">
+            <li><a href="#coffee">Coffee varieties</a></li>
+            <li><a href="{%url 'culture' %}">Coffee blogs</a></li>
+            <li><a href="{%url 'machines' %}">Machines</a></li>
+            <li class="divider"></li>
+          </ul>
         </div>
-      </div></li>
+
+      <li><a href="{%url 'about_us' %}">About</a></li>
        <li><a href="#contact">Contact</a></li>
-       <li><a href="#about">About</a></li>
     </div>
-    <div style="margin-right: 5%;">
     <div class="search-icon">
        <span class="fas fa-search"></span>
     </div>
@@ -420,9 +379,9 @@ nav .logo.space{
        <input type="search" class="search-data" placeholder="Search" required>
        <button type="submit" class="fas fa-search"></button>
     </form>
-    </div>
-    <h2><a style="color: white;" href="{% url 'login' %}">Login</a></h2>
+    <h3><a style="color: white;" href="{%url 'login' %}">Login</a></h3>
  </nav>
+
 </div>
  <!-- end -->
  <!-- landing -->
@@ -442,28 +401,28 @@ nav .logo.space{
   
       <div class="carousel-inner">
         <div class="item active">
-          <h4 style="text-align: center;color: white;">Machines</h4>
-          <img src="http://cdn.shopify.com/s/files/1/0028/0520/3057/files/brew-Auto-800x400.jpg?v=1594701394" style="width:100%;height:50%,">
+          <!-- <h4 style="text-align: center;color: black;">Machines</h4> -->
+          <img src="https://www.surlatable.com/on/demandware.static/-/Sites/default/dw053e7774/images/category_banners_1280/2019_category_banners_ct_brands_nespresso_1280.jpg" style="width:100%;height:50%,">
         </div>
   
         <div class="item">
-          <h4 style="text-align: center;color: white;">About us</h4>
-          <img src="https://st2.depositphotos.com/3591429/11476/i/950/depositphotos_114769730-stock-photo-people-drinking-coffee.jpg            " style="width:100%;height:50%,">
+          <!-- <h4 style="text-align: center;color: black;">About us</h4> -->
+          <img src="https://i.gifer.com/origin/1b/1b57aba4ff16ac99b4fa59c3009b679f.gif" style="width:100%;height:30%,">
         </div>
       
         <div class="item">
-          <h4 style="text-align: center;color: white;">Coffee culture</h4>
-          <img src="https://jetsettimes.com/wp-content/uploads/2012/10/dsc00184.jpg" style="width:100%" style="width:100%;height:50%,">
+          <!-- <h4 style="text-align: center;color: black;">Coffee culture</h4> -->
+          <img src="https://img.wattpad.com/7e16406a897042c8200426000186d986b2750eb9/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f30584d59565a4e43666c4b7a39673d3d2d3836353332363533382e313630353538353937376534373866373236303531343936393833352e676966" style="width:100%" style="width:100%;height:50%,">
         </div>
 
         <div class="item">
-          <h4 style="text-align: center;color: white;">Coffee types</h4>
-          <img src="https://c4.wallpaperflare.com/wallpaper/231/256/948/coffee-bean-cup-still-life-photography-coffee-cup-wallpaper-preview.jpg" style="width:100%" style="width:100%;height:50%,">
+          <!-- <h4 style="text-align: center;color: black;">Types of Coffee</h4> -->
+          <img src="https://bestcoffeebeansblog.files.wordpress.com/2016/08/single-origin-coffee.jpg" style="width:100%" style="width:100%;height:50%,">
         </div>
 
         <div class="item">
-          <h4 style="text-align: center;color: white;">Top items</h4>
-          <img src="https://www.tokyu-hands.co.jp/hintmagazine/assets_c/2017/08/09cofee1_top-thumb-700xauto-185516.jpg" style="width:100%" style="width:100%;height:50%,">
+          <!-- <h4 style="text-align: center;color: black;">Top coffee items</h4> -->
+          <img src="https://cdn.mos.cms.futurecdn.net/3H9pfV47vCmyNBqvaPMJL5.jpeg" style="width:100%" style="width:100%;height:50%,">
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -477,135 +436,71 @@ nav .logo.space{
     </div>
   </div>
 
-  <!-- -- Custozing coffee starts here --> -->
-<div id="customzing">
-<div style="background-color: black;">
-  <h1 style="color:white; margin-left: 4%;">Custozing Coffee</h1>
+  <!-- Custozing -->
+
+  <div id="customize">
+  <div style="background-color:black">
+  <!-- <h1 style="color:white; margin-left: 4%;">Customizing Coffee</h1> -->
+  <h3 style="color: white;margin-left: 4%;">Customize your own coffee</h3>
+  <hr>
+</div>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4" style="text-align: center;width: 60%;margin-left: 20%;">
+    <div class="col">
+      <div class="card">
+        <img src="https://assets.bonappetit.com/photos/5c366551f212512d0e6cefd0/16:9/w_2992,h_1683,c_limit/Basically-Coffee-0219-03.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{%url 'beans' %}" button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50%; margin-top: 1%;">BEANS</button></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://previews.123rf.com/images/rixie/rixie1608/rixie160800044/63588302-a-collage-of-coffee-beans-showing-various-stages-of-roasting-from-raw-through-to-italian-roast.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{%url 'blend' %}" button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50%; margin-top: 1%;">BLEND</button></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://i1.wp.com/www.holar.com.tw/wp-content/uploads/Holar-Blog-How-to-Choose-the-Right-Coffee-Grind-Size-of-Your-Coffee-1.jpg?resize=800%2C400&ssl=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{%url 'grind' %}" button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50%; margin-top: 1%;">GRIND</button></a>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://ucarecdn.com/ddceab9a-d504-4e5e-9b9d-2ad8c4050b9c/-/preview/9wrsn4HF" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{%url 'acidity' %}" button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50%; margin-top: 1%;">LABEL</button></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <a href="{%url 'customizing' %}" button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50%; margin-top: 1%;">Next</button></a> -->
+
+  <!-- ending -->
+<!-- all products -->
+<div style="background-color:black">
+  <!-- <h1 style="color:white; margin-left: 4%;">Shop with Coffeehub</h1> -->
   <h3 style="color: white;margin-left: 4%;">Explore more with us</h3>
   <hr>
 </div>
-<div style="margin-left: 3%;">
 
-
-    <h2 class="card-title">CREATE YOUR CUSTOM COFFEE</h2>
-      It is simple to create your<br> own, blend 
-      of world class coffee.<br>
-      We are here to guide <br>you through the 
-      four  steps of <br> creating your own coffee.<br>
-      Just tell us what you want<br></h3></p>
-    </div>
-
-      <div class="row row-cols-1 row-cols-md-2 g-4" style="width: 60%;margin-left: 20%; margin-bottom: 5%;">
-    
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"></div>
-        <div class="col">
-          <div class="card">
-            <img src="https://assets.bonappetit.com/photos/5c366551f212512d0e6cefd0/master/pass/Basically-Coffee-0219-03.jpg" class="card-img-top" alt="...">
-            <div class="flip-card-back">
-    
-            <div class="card-body">
-              <h5 class="card-title">BEANS</h5>
-              <p class="card-text"><a  href="#" button type="button">Read more</button></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front"></div>
-        <div class="col">
-          <div class="card">
-            <img src="https://perfectdailygrind.com/wp-content/uploads/2021/04/Coffee-Bean-Hardness-FB-Thumbnail.jpg" class="card-img-top" alt="...">
-            <div class="flip-card-back">
-            <div class="card-body">
-              <h5 class="card-title">BLEND</h5>
-              <p class="card-text"><a  href="#" button type="button">Read more</button></a></p>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-    </div>
-    
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front"></div>
-        <div class="col">
-          <div class="card">
-            <img src="https://media.apnarm.net.au/media/images/2019/10/22/v3imagesbin4ca6d167304a53fa711502d8fc9ba17a-tdyq1758kzon1yby6t2_t1880.jpg" class="card-img-top" alt="...">
-            <div class="flip-card-back">
-            <div class="card-body">
-              <h5 class="card-title">GRIND</h5>
-              <p class="card-text"><a  href="#" button type="button">Read more</button></a>
-              </p>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-    </div>
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front"></div>
-           
-        <div class="col">
-          <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIN3qd7NTQkWY5NSRnZRmHChcCXTDun0FvMLdCBy7ZszMAZGWxALlzkKPR5GjrqzE089k&usqp=CAU" class="card-img-top" alt="...">
-            <div class="flip-card-back">
-            <div class="card-body">
-              <h5 class="card-title">LABEL</h5>
-              <p class="card-text"><a  href="#" button type="button">Read more</button></a>
-              </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-    </div>
-        <div style="margin-left: 45%;">
-          <a  href="#" button type="button" class="btn btn-secondary btn-lg">Next</button></a>
-        </div>
-      </div>
-    
-<!--  starts all products -->
-<div style="background-color: black;">
-  <h1 style="color:white; margin-left: 4%;">Shop with Coffeehub</h1>
-  <h3 style="color: white;margin-left: 4%;">Explore more with us</h3>
-  <hr>
-</div>
-<div style="margin-left: 5%;">
-<h1>Filters</h1>
-<h4>Categories</h4>
-<form action="/action_page.php">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"><a href="#coffee">Coffee</a></label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle1"><a href="#{% url 'machines' %}">Machines</a></label><br>
-</form>
-</div>
-  <!-- <div style="white-space:10%;">
-<svg height="100" width="100">
-  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" /></svg> 
-<svg height="100" width="100">
-  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="black" /></svg> 
-<svg height="100" width="100">
-  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="Yellow" /></svg>
-</div> -->
-<div style="margin-left: 20%;">
 <div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%;">
   <div class="col">
     <div class="card">
       <img src="https://www.plasticprinters.com/hs-fs/hubfs/social-suggested-images/Menu-Coffee-Cup-Black-Rifle-Coffee-Company-Sample.jpg?width=840&name=Menu-Coffee-Cup-Black-Rifle-Coffee-Company-Sample.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Custozing Coffee</h5>
-        <a href="#" class="btn btn-secondary btn-lg">Read more</a>
+        <h5 class="card-title">Customizing Coffee</h5>
+        <a href="{%url 'customizing' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
       </div>
     </div>
   </div>
@@ -614,30 +509,26 @@ nav .logo.space{
       <img src="https://www.eac.int/images/Press_Releases/coffee.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Coffee Varieties</h5>
-        <a href="#coffee" class="btn btn-secondary btn-lg">Read more</a>
+        <a href="{%url 'products' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
 
       </div>
     </div>
   </div>
-</div>
-<div class="row row-cols-1 row-cols-md-3 g-4" style="text-align: center;width: 95%;margin-left: 2.5%; margin-top: 2%;">
-<div class="col">
-  <div class="card">
-    <img src="https://www.bestconsumerreviews.com/wp-content/uploads/2018/09/Espresso-Machine-5.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Coffee Machine</h5>
-      <a href="{% url 'machines' %}" class="btn btn-secondary btn-lg">Read more</a>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.bestconsumerreviews.com/wp-content/uploads/2018/09/Espresso-Machine-5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Coffee Machine</h5>
+        <a href="{%url 'machines' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
+      </div>
     </div>
   </div>
 </div>
-</div>
-</div>
-<!-- For the products end -->
 
 <!-- For coffee -->
 <div id="coffee">
 <div style="background-color: black;margin-top: 2%;">
-<h1 style="color:white; margin-left: 4%;">Coffee</h1>
+<!-- <h1 style="color:white; margin-left: 4%;">Coffee</h1> -->
 <h3 style="color: white;margin-left: 4%;">Explore more of coffee varieties from across the world</h3>
 <hr>
 <!-- btn -->
@@ -651,9 +542,7 @@ nav .logo.space{
       <img src="https://static.wixstatic.com/media/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.jpg/v1/crop/x_80,y_0,w_320,h_320/fill/w_448,h_297,al_c,lg_1,q_80/46af14_d1047090645d47b08ef9c44021a65fb9~mv2.webp" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Arabica Coffee</h5>
-        <a href="{% url 'products' %}" class="btn btn-secondary btn-lg">Read more</a>
-        <a href="{% url 'store' %}" class="btn btn-secondary btn-lg">make orders</a>
-
+        <a href="{% url 'products' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
 
       </div>
     </div>
@@ -663,8 +552,7 @@ nav .logo.space{
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XcrGwgG1O1zlIVTdaz-_dh-XsrKUsk1HiQ&usqp=CAU" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Robuster Coffee</h5>
-        <a href="{% url 'products' %}" class="btn btn-secondary btn-lg">Read more</a>
-        <a href="{% url 'store' %}" class="btn btn-secondary btn-lg">make orders</a>
+        <a href="{% url 'products' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
 
       </div>
     </div>
@@ -674,8 +562,7 @@ nav .logo.space{
       <img src="https://www.ubuy.co.id/productimg/?image=aHR0cHM6Ly9pLmViYXlpbWcuY29tL2ltYWdlcy9nL3ZIY0FBT1N3NW54YWJtYjcvcy1sNTAwLmpwZw.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Liberica</h5>
-        <a href="{% url 'products' %}" class="btn btn-secondary btn-lg">Read more</a>
-        <a href="{% url 'store' %}" class="btn btn-secondary btn-lg">make orders</a>
+        <a href="{% url 'products' %}" button type="button" class="btn btn-secondary btn-lg">Read more</button></a>
       </div>
     </div>
   </div>
@@ -684,76 +571,7 @@ nav .logo.space{
 </div>
 </div>
 
-<!-- About us -->
-<hr>
-<h1 class="us">Our Team</h1>
-<div id="about">
-<div class="wrapper">
-  <div class="our_team">
-      <div class="team_member">
-        <div class="member_img">
-           <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%202.png" alt="our_team" style="border-radius: 100%;">
-          <div class="social_media">
-             <div class="twitter item"><i class="fab fa-twitter"></i></div>
-             <div class="instagram item"><i class="fab fa-instagram"></i></div>
-           </div>
-        </div>
-        <h3 style="color: black;">Catherine Gichina</h3>
-        <h5 style="color: black;">Software Developer</h5>
-      </div>
-      <div class="team_member">
-         <div class="member_img">
-           <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%203.png" alt="our_team" style="border-radius: 100%;">
-           <div class="social_media">
-             <div class="twitter item"><i class="fab fa-twitter"></i></div>
-             <div class="instagram item"><i class="fab fa-instagram"></i></div>
-           </div>
-        </div>
-        <h3 style="color: black;">Sandra Nasasiira</h3>
-        <h5 style="color: black;">UX/UI Designer</h5>
-    </div>
-      <div class="team_member">
-         <div class="member_img">
-           <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/constance%20kavaya.jpg" alt="our_team" style="border-radius: 100%;">
-           <div class="social_media">
-             <div class="twitter item"><i class="fab fa-twitter"></i></div>
-             <div class="instagram item"><i class="fab fa-instagram"></i></div>
-           </div>
-        </div>
-        <h3 style="color: black;">Constant  Kavaya</h3>
-        <h5 style="color: black;">Software Developer</h5>
-    </div>
-      <div class="team_member">
-         <div class="member_img">
-           <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Ellipse%205.png" alt="our_team" style="border-radius: 100%;">
-           <div class="social_media">
-             <div class="twitter item"><i class="fab fa-twitter"></i></div>
-             <div class="instagram item"><i class="fab fa-instagram"></i></div>
-           </div>
-        </div>
-        <h3 style="color: black;">Hamdi Abas</h3>
-        <h5 style="color: black;">Front-end Developer</h5>
-    </div> 
-    
-    <div class="team_member">
-      <div class="member_img">
-        <img src="https://raw.githubusercontent.com/fadallalaaisha/images/main/Aisha2.png" alt="our_team" style="border-radius: 100%;">
-        <div class="social_media">
-          <div class="twitter item"><i class="fab fa-twitter"></i></div>
-          <div class="instagram item"><i class="fab fa-instagram"></i></div>
-        </div>
-     </div>
-     <h3 style="color: black;">Aisha Fadallala</h3>
-     <h5 style="color: black;">Software Developer</h5>
- </div> 
-  </div>
-</div>
-</div>
-<div style="text-align: center; margin-top: 2%;">
-<a href="#" class="btn btn-secondary btn-lg">Read more</a>
-</div>
-<h3 style="text-align: center;margin-top: 5%;">History of Kenyan coffee</h3>
-<!-- Ends-->
+  <!-- About us -->
 
 <!-- Contact us -->
 <div id="contact">
@@ -762,25 +580,15 @@ nav .logo.space{
     <div class="container2">
         <div class=" row2" style="margin-left: 1%;">
           <div class="footer-col">
-            <ul>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-            </ul>
           </div>
             <div class="footer-col">
                 <ul>
                   <li>
                     <h1>Shop</h1>
                     <h3><a href="#home">Home </a><br>
-                    <a href="#About">Machines</a><br>
-                    <a href="#">Coffee</a><br>
-                    <a href="#">Custozing</a></h3>
+                    <a href="{%url 'machines' %}">Machines</a><br>
+                    <a href="{%url 'products' %}">Coffee</a><br>
+                    <a href="#">Customizing</a></h3>
                   </li>
                 </ul>
             </div>
@@ -788,17 +596,16 @@ nav .logo.space{
                 <ul>
                   <h1>Help</h1>
                   <li>
-                    <h3><a href="#">Order </a><br>
-                   <a href="#">payments </a><br>
+                    <h3><a href="{%url 'store' %}">Order </a><br>
+                   <a href="{%url 'culture' %}">Coffee culture </a><br>
                   <a href="#">Contact Us </a><br>
-                    <a href="#">Coffee culture</a></h3>
                     </li>
                 </ul>
             </div>
             <div class="footer-col" style="font-size: large;">
                 <h1>Follow us</h1>
                 <div class="social-links">                  
-                    <a href="#"><i class="fab fa-twitter"></i> </a>
+                    <a href="https://twitter.com/aishafadallala"><i class="fab fa-twitter"></i> </a>
                     <a href="#"><i class="fab fa-linkedin"></i> </a>
                     <a href="#"><i class="fab fa-instagram"></i> </a>
                 </div>
@@ -811,14 +618,14 @@ nav .logo.space{
 
 .footer {
   background-color: black;
-  padding: 4% 0; 
+  padding: 2% 0; 
 }
 .row2{
   display: flex;
   flex-wrap: wrap;
 }
 .footer-col{
-  width: 25%;
+  width: 20%;
   padding: 0 15px;
 }
 .footer-col h1{

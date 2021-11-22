@@ -5,7 +5,6 @@ from django.views import View
 from store.models.product import Product
 from store.models.orders import Order
 
-
 class CheckOut(View):
     def post(self, request):
         address = request.POST.get('address')
@@ -23,7 +22,9 @@ class CheckOut(View):
                           address=address,
                           phone=phone,
                           quantity=cart.get(str(product.id)))
+            order.customer.save()
             order.save()
+            
         request.session['cart'] = {}
 
         return redirect('cart')
